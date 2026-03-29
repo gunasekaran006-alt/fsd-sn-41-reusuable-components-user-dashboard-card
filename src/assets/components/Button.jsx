@@ -1,8 +1,12 @@
 import React from 'react'
 
-function Button() {
+function Button(props) {
   return (
-    <div>Button</div>
+    <div>
+
+<button style ={{backgroundColour: "black", borderRadius: '8px', colour: "white", curser: 'pointer' }} >{props.name}</button>
+
+    </div>
   )
 }
 
