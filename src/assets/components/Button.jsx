@@ -4,7 +4,7 @@ function Button(props) {
   return (
     <div>
 
-<button style ={{backgroundColour: "black", borderRadius: '8px', colour: "white", curser: 'pointer' }} >{props.name}</button>
+        <button style={{backgroundColor: "black", borderRadius: '8px', color: "white", cursor: 'pointer'}}>{props.name}</button>
 
     </div>
   )

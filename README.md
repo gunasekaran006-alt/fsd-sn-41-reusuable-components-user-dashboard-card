@@ -1,16 +1,26 @@
-# React + Vite
+# Role-Based Dashboard Access (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet effective React project that demonstrates how to handle **Conditional Rendering** based on user roles and login status.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Authentication Check**: Verifies if the user is logged in using a `loginstatus` boolean.
+- **Role-Based UI**: Dynamically displays different action buttons based on the user's role:
+  - **Developer**: Can "Submit Code".
+  - **Lead**: Can "Create Task" and "Approve Task".
+  - **Manager**: Can "Create Task", "Delete Task", and "Approve Task".
+- **Reusable Components**: Uses a custom `Button` component with inline styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **React.js**: Functional components and Props.
+- **CSS-in-JS**: Inline styling for components.
 
-## React Compiler
+## 📂 Project Structure
+- `App.js`: Contains the main state/data for the user.
+- `Dashboard.jsx`: Handles the logic for showing specific features based on roles.
+- `Button.jsx`: A reusable UI component for actions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📝 How it works
+The `Dashboard` component receives `userData` as props. It first checks if the user is authenticated. If true, it evaluates the `role` property (`developer`, `lead`, or `manager`) using nested ternary operators to render the appropriate buttons.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 Note
+In the `Button.jsx` file, ensure CSS property names are spelled correctly (e.g., `backgroundColor` instead of `backgroundColour`) for the styles to apply correctly in a browser environment.
